@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, View,FlatList } from 'react-native';
 import Header from './components/header';
-import TodoItems from './components/todoItems';
+import TodoItem from './components/todoItem';
 
 export default function App() {
   const [todos, setTodos]= useState([
@@ -11,6 +11,13 @@ export default function App() {
     {text: 'Create an app', key: 3},
     {text: 'Play on the switch', key: 4},
   ]);
+
+  const pressHandler= (key) => {
+    setTodos((prevTodos)=>{
+      return prevTodos.filter(todo=>todo.key!=key);
+    })
+  }
+
   return (
     <View style={styles.container}>
       {/*Header*/}
@@ -21,7 +28,7 @@ export default function App() {
           <FlatList
             data={todos}
             renderItem={({item})=>(
-                <TodoItems item={items}/>
+                <TodoItem item={item} pressHandler={pressHandler} />
             )}
           
           />
