@@ -1,20 +1,20 @@
 import React,{useState} from 'react';
 import { StyleSheet, Text, TextInput,Button, View} from 'react-native';
 
-export default function AddTodo() {
-    const [Text,setText]= useState('');
+export default function AddTodo({submitHandler}) {
+    const [text,setText]= useState('');
 
     const changeHandler= (val)=> {
-        setText(val);
+        setText(val);   
     }
     return (
         <View>
             <TextInput
             style={styles.input}
-                placeholder='new todo...'
-                onChangeText={changeHandler}
+            placeholder='new todo...'
+            onChangeText={changeHandler}
             />
-            <Button onPres={()=> submitHandler(text)} title='add todo' color='coral'/>
+            <Button onPress={()=> submitHandler(text)} title='add todo' color='coral'/>
         </View>
 
     )
