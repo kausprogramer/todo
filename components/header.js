@@ -17,10 +17,10 @@ const styles= StyleSheet.create({
         backgroundColor:'coral',
     },
     title: {
-        paddingTop:'21%',
+        paddingTop:'22%',
         textAlign: 'center',
         color: '#fff',
-        fontSize: 20,
+        fontSize: 18,
         FontWeight: 'bold',
     }
 })
