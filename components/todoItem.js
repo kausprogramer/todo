@@ -11,7 +11,8 @@ export default function TodoItem({item,pressHandler}){
 
 const styles =StyleSheet.create({
     item:{
-        padding:16,
+        width:'100%',
+        padding:5,
         marginTop:16,
         borderColor:'#bbb',
         borderWidth:1,
