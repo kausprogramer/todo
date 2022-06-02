@@ -14,14 +14,16 @@ export default function AddTodo() {
                 placeholder='new todo...'
                 onChangeText={changeHandler}
             />
-            <Button onPres={()=> console.log(text)} title='add todo' color='coral'/>
+            <Button onPres={()=> submitHandler(text)} title='add todo' color='coral'/>
         </View>
+
     )
 }
 
 const styles=StyleSheet.create({
     input: {
-        paddingTop:34,
+        width:'100%',
+        marginTop:30,
         marginBottomm:10,
         paddingHorizontal: 8,
         paddingVertical:6,
