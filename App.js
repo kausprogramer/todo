@@ -64,7 +64,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop:40,
   },
+  content:
+  {
+    flex:1,
+  },
   list:{
+    flex:1,
     padding:24,
   },
   item:{
@@ -72,7 +77,7 @@ const styles = StyleSheet.create({
   },
   header:
   {
-    height:'21%',
+    height:'5%',
     width:'100%',
   },
 
