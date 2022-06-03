@@ -30,7 +30,7 @@ export default function App() {
 
   return (
     <View style={styles.contentMax}>
-    <StatusBar backgroundColor='black'/>
+    <StatusBar backgroundColor='#fff2e6'/>
     <TouchableWithoutFeedback onPress={() => {
         Keyboard.dismiss();
       } }>
