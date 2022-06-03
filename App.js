@@ -29,30 +29,31 @@ export default function App() {
   }
 
   return (
-    <TouchableWithoutFeedback onPress={()=>{
-      Keyboard.dismiss();
-    }
-    }>
-      <View style={styles.container}>
-        {/*Header*/}
-        <View style={styles.header}>
-          <Header />
-        </View>
-        <View style={styles.content}>
-          {/* to Form */}
-          <AddTodo submitHandler={submitHandler}/>
-          <View style={styles.list}>
-            <FlatList
-              data={todos}
-              renderItem={({item})=>(
+    <View style={styles.contentMax}>
+    <StatusBar backgroundColor='black'/>
+    <TouchableWithoutFeedback onPress={() => {
+        Keyboard.dismiss();
+      } }>
+        <View style={styles.container}>
+        
+          {/*Header*/}
+          <View style={styles.header}>
+            <Header />
+          </View>
+          <View style={styles.content}>
+            {/* to Form */}
+            <AddTodo submitHandler={submitHandler} />
+            <View style={styles.list}>
+              <FlatList
+                data={todos}
+                renderItem={({ item }) => (
                   <TodoItem item={item} pressHandler={pressHandler} />
-              )}
-            
-            />
+                )} />
+            </View>
           </View>
         </View>
+      </TouchableWithoutFeedback>
       </View>
-    </TouchableWithoutFeedback>
   );
 }
 
@@ -64,6 +65,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop:40,
     backgroundColor:'#fff2e6',
+  },
+  contentMax:{
+    flex:1
   },
   content:
   {
