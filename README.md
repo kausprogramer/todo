@@ -8,7 +8,7 @@ This is an easy use app, in which you can easily add task with a click of button
 
 ## ios
 
-<img src = "ios_Todo.jpeg" width="200">
+<img src = "Ios_Todo.jpeg" width="200">
 
 ## Implimentation
 
