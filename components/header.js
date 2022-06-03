@@ -15,7 +15,7 @@ const styles= StyleSheet.create({
         paddingTop:10,
         width:'100%',
         height: '100%',
-        backgroundColor:'coral',
+        backgroundColor:'#994d00',
     },
     title: {
         textAlign: 'center',

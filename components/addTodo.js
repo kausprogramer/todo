@@ -14,7 +14,7 @@ export default function AddTodo({submitHandler}) {
             placeholder='new todo...'
             onChangeText={changeHandler}
             />
-            <Button onPress={()=> submitHandler(text)} title='add todo' color='coral'/>
+            <Button onPress={()=> submitHandler(text)} title='add todo' color='#994d00'/>
         </View>
 
     )
@@ -27,7 +27,7 @@ const styles=StyleSheet.create({
         marginBottomm:10,
         paddingHorizontal: 8,
         borderBottomWidth: 1,
-        borderBottomColor:'#ddd',
+        borderBottomColor:'#994d00',
     },
     veiwCont:{
         marginHorizontal:50,
