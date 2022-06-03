@@ -8,7 +8,7 @@ export default function AddTodo({submitHandler}) {
         setText(val);   
     }
     return (
-        <View>
+        <View style={styles.veiwCont}>
             <TextInput
             style={styles.input}
             placeholder='new todo...'
@@ -22,12 +22,14 @@ export default function AddTodo({submitHandler}) {
 
 const styles=StyleSheet.create({
     input: {
-        width:300,
+        width:'100%',
         marginTop:30,
         marginBottomm:10,
         paddingHorizontal: 8,
-        paddingVertical:6,
         borderBottomWidth: 1,
         borderBottomColor:'#ddd',
+    },
+    veiwCont:{
+        marginHorizontal:50,
     }
 })
